@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script src="https://familysearch.github.io/familysearch-javascript-sdk/familysearch-javascript-sdk.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+
+            /* For more detailed instructions go to: https://familysearch.org/developers/docs/guides/getting-started
+            1. Paste App Key in line 13
+            2. Click "Run" above
+            3. In the panel to the right click text "Run" ---------------------->
+            4. When prompted, login with your INTEGRATION username and password
+            5. You will see an Access Token in the right panel
+            */
+            $(document).ready(function(){
+
+                console.log('jQuery loaded');
+
+                var client = new FamilySearch({
+                    app_key: 'a02f100000Q6pY2AAJ',
+                    auth_callback: 'http://127.0.0.1/familychart/test.html',
+                    environment: 'integration'
+                });
+
+                function run() {
+                client.getAccessToken().then(function (response) {
+                    output('Access token', response);
+                    // the access token is cached in the FamilySearch object
+                });
+                }
+                                                    
+                $('#run').click(function(){
+                    console.log('click fires');
+                    run();
+                });
+
+                function output(label, data) {
+                    $('#output').append(label ? '<h3>'+label+'<h3>' : '<hr>');
+                    $('#output').append(data);
+                }
+
+
+            });
+            
+
+        </script>
+    </head>
+    <body>
+        <a id="run">Run</a>
+        <div id="output" />
+    </body>
+</html>

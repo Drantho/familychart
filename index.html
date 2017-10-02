@@ -1,0 +1,102 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Search FamilySearch</title>
+
+  <meta name="description" content="The HTML5 Herald">
+
+  <meta name="author" content="SitePoint">
+
+  <script src="FamilySearch.min.js"></script>
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+
+    <h1>Search FamilySearch</h1>
+
+    <p>Login, and then beging searching Family Tree. This app uses the <a href="https://github.com/FamilySearch/fs-js-lite">FamilySearch JS Lite SDK</a></p>
+
+    <button class="login btn btn-primary">Login</button>
+
+    <input class="first_name" type="" name="" value="Bob">
+
+    <input class="last_name" type="" name="" value="Jones">
+
+    <button class="search btn btn-success">Search</button>
+
+
+
+    <ul class="results"></ul>
+
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous">
+
+    </script>
+
+  <script type="text/javascript">
+    var fs = new FamilySearch({
+
+      environment: 'integration',
+
+      appKey: 'a02f100000Q6t0YAAR',
+
+      redirectUri: 'http://localhost/familychart/index.html',
+
+      saveAccessToken: true,
+
+      tokenCookie: 'FS_AUTH_TOKEN'
+
+    });
+
+    fs.oauthResponse();
+
+    $('.login').click(function () {
+
+      fs.oauthRedirect();
+
+    });
+
+    $('.search').click(function () {
+
+      fs.get('/platform/tree/ancestry?person=L5DT-LD7', {
+
+        //headers: { Accept: 'application/x-gedcomx-atom+json' }
+
+      }, function (error, response) {
+
+        if (response.statusCode == 401) alert("You must login first");
+
+        var entries = response.data.entries;
+
+        console.log(response);
+
+        $("#divResult").html(JSON.stringify(response.data.persons));
+
+      });
+
+    });
+
+  </script>
+
+  <div id="divResult">
+
+  </div>
+</body>
+
+</html>
