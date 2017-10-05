@@ -8,7 +8,7 @@
             var height = 7000;
             var tagWidth = 425;
             var tagHeight = 110;
-            var tagMargin = 250;
+            var tagMargin = 175;
             var border = 200;
             
 
@@ -42,16 +42,15 @@
                 /*Create and place the "blocks" containing the circle and the text */  
                 var elemEnter = elem.enter()
 	                .append("g")
-                    .attr("transform", function(d){return "translate("+ (GetPlacement(d.display.ascendancyNumber).left - 200) +"," + GetPlacement(d.display.ascendancyNumber).top + ")"});
+                    .attr("transform", function(d){return "translate("+ Translate(d).left +"," + Translate(d).top + ")"});
 
                 elemEnter.append("path")
-                    //.attr("d", function(d){ return "m" + GetPlacement(d.display.ascendancyNumber).top + " " + GetPlacement(d.display.ascendancyNumber).left + " " + (GetPlacement(d.display.ascendancyNumber).top) + " " + (GetPlacement(d.display.ascendancyNumber).left + 800) + " ";})
 
                     .attr("d", function(d){
-                        
+
                         var svgPath = "";
-                        var rightBar = " M 425 " + (BoxSize(GetLevel(d.display.ascendancyNumber))/2) + " 500 " + (BoxSize(GetLevel(d.display.ascendancyNumber))/2) + " ";
-                        var leftBar = " M -0 " + (BoxSize(GetLevel(d.display.ascendancyNumber))/2) + " -175 " + (BoxSize(GetLevel(d.display.ascendancyNumber))/2) + " ";
+                        var rightBar = " M " + BoxSize(GetLevel(d.display.ascendancyNumber)).startPoint + " " + (BoxSize(GetLevel(d.display.ascendancyNumber)).height/2) + " 75 " + (BoxSize(GetLevel(d.display.ascendancyNumber)).height/2) + " ";
+                        var leftBar = " M 0 " + (BoxSize(GetLevel(d.display.ascendancyNumber)).height/2) + " -100 " + (BoxSize(GetLevel(d.display.ascendancyNumber)).height/2) + " ";
 
                         if(LeftOrRight(d.display.ascendancyNumber) == "right"){
 
@@ -70,11 +69,12 @@
 
                         if((d.display.ascendancyNumber % 2) == 0 && d.display.ascendancyNumber > 6){
                             if(LeftOrRight(d.display.ascendancyNumber) == "right" && d.display.ascendancyNumber != 2){
-                                svgPath += " M -175 " + (BoxSize(GetLevel(d.display.ascendancyNumber))/2) + " -175 " + ((BoxSize(GetLevel(d.display.ascendancyNumber))/2) + GetPlacement(d.display.ascendancyNumber).spacing);
+                                svgPath += " M -100 " + (BoxSize(GetLevel(d.display.ascendancyNumber)).height/2) + " -100 " + ((BoxSize(GetLevel(d.display.ascendancyNumber)).height/2) + GetPlacement(d.display.ascendancyNumber).spacing);
                             } 
 
                             if(LeftOrRight(d.display.ascendancyNumber) == "left"){
-                                svgPath += " M 500 " + (BoxSize(GetLevel(d.display.ascendancyNumber))/2) + " 500 " + ((BoxSize(GetLevel(d.display.ascendancyNumber))/2) + GetPlacement(d.display.ascendancyNumber).spacing);
+                                svgPath += " M " + BoxSize(GetLevel(d.display.ascendancyNumber)).startPoint + " " + (BoxSize(GetLevel(d.display.ascendancyNumber)).height/2) + " " + BoxSize(GetLevel(d.display.ascendancyNumber)).startPoint + " " + ((
+                                    BoxSize(GetLevel(d.display.ascendancyNumber)).height/2) + GetPlacement(d.display.ascendancyNumber).spacing);
                             } 
                             
                         } 
@@ -84,7 +84,7 @@
                         }
 
                         if(d.display.ascendancyNumber == 2 || d.display.ascendancyNumber == 3){
-                            svgPath = "M 425 2000 1650 2000";
+                            svgPath = "m 0 200 -250 0 m 675 0 250 0";
                         }
 
                         return svgPath;
@@ -108,33 +108,17 @@
                 */
                 /*Create the circle for each block */
                 var rect = elemEnter.append("rect")
-                    .attr("height", function(d){return BoxSize(GetLevel(d.display.ascendancyNumber))} )
-                    .attr("width", tagWidth )
+                    .attr("height", function(d){return BoxSize(GetLevel(d.display.ascendancyNumber)).height} )
+                    .attr("width", function(d){return BoxSize(GetLevel(d.display.ascendancyNumber)).width} )
 	                .attr("stroke","black")
                     .attr("fill", "white");
-                    //.attr("opacity", 0.35);
-                    
-                
-                    /*
-                    elemEnter.append("text")
-                    .attr("dx", 30)
-                    .attr("dy", 25)
-                    .attr("font-size", "12pt")
-                    .text(function(d, i){return "Number: " + d.display.ascendancyNumber + " Level: " + GetPlacement(d.display.ascendancyNumber).level + " Position: " + GetPlacement(d.display.ascendancyNumber).position;})
-
-                    elemEnter.append("text")
-                    .attr("dx", 30)
-                    .attr("dy", 45)
-                    .attr("font-size", "8pt")
-                    .text(function(d, i){return GetPlacement(d.display.ascendancyNumber).TopOrBottom})
-                    */
 
                 /* Create the text for each block */
                 elemEnter.append("text")
                     .attr("dx", 30)
                     .attr("dy", function(d){return TextPlaceName(GetLevel(d.display.ascendancyNumber));})
                     .attr("font-size", function(d){return FontSize1(GetLevel(d.display.ascendancyNumber));})
-                    .text(function(d, i){return d.display.name;})
+                    .text(function(d, i){return TextLineName(d);})
 
                 elemEnter.append("text")
                     .attr("dx", 30)
@@ -161,6 +145,100 @@
                     .text(function(d, i){return TextLine4(d);})
                 
             }
+            function Translate(person){
+
+                console.log("Translate() fires testing " + GetLevel(person.display.ascendancyNumber));
+                var placement = {};
+
+                placement.top = GetPlacement(person.display.ascendancyNumber).top;
+
+                placement.left = GetPlacement(person.display.ascendancyNumber).left - 200;
+
+                switch(GetLevel(person.display.ascendancyNumber)){
+                    case 2:
+                        if(LeftOrRight(person.display.ascendancyNumber) == "left"){
+                            
+                        } else {
+                            placement.left -= 80;
+                        }
+                        break;
+                     case 3:
+                        if(LeftOrRight(person.display.ascendancyNumber) == "left"){
+
+                        } else {
+                            placement.left -= 80;
+                        }
+                        break;
+                    case 4:
+                        if(LeftOrRight(person.display.ascendancyNumber) == "left"){
+
+                        } else {
+                            placement.left -= 80;
+                        }
+                        break;
+                    case 5:
+                        if(LeftOrRight(person.display.ascendancyNumber) == "left"){
+
+                        } else {
+                            placement.left -= 80;
+                        }
+                        break;
+                    case 6:
+                        if(LeftOrRight(person.display.ascendancyNumber) == "left"){
+
+                        } else {
+                            placement.left -= 80;
+                        }
+                        break;
+                    case 7:
+                        if(LeftOrRight(person.display.ascendancyNumber) == "left"){
+                            console.log("left");
+                            placement.left -= 150;
+                        } else {
+                            console.log("right");
+                            placement.left -= 75;
+                        }                        
+                        break;
+                    case 8:
+                        if(LeftOrRight(person.display.ascendancyNumber) == "left"){
+                            console.log("left");
+                            placement.left -= 350;
+                        } else {
+                            console.log("right");
+                            placement.left += 75;
+                        }
+                        break;
+                }
+
+                return placement;
+
+            }
+
+            function TextLineName(person){
+
+                switch(GetLevel(person.display.ascendancyNumber)){
+                    case 0:
+                        return person.display.name;
+                    case 1:
+                        return person.display.name;
+                    case 2:
+                        return person.display.name;
+                    case 3:
+                        return person.display.name;
+                    case 4:
+                        return person.display.name;
+                    case 5:
+                        return person.display.name;
+                    case 6:
+                        return person.display.name;
+                    case 7:
+                        return person.display.name + " " + person.display.birthDate + " - " + person.display.deathDate;
+                    case 8:
+                        return person.display.name + " " + person.display.birthDate + " - " + person.display.deathDate;
+                }
+
+            }
+
             function TextLine1(person){
 
                 switch(GetLevel(person.display.ascendancyNumber)){
@@ -179,9 +257,9 @@
                     case 6:
                         return "B: " + person.display.birthPlace;
                     case 7:
-                        return "B: " + person.display.birthPlace + " " + person.display.birthDate;
+                        return "B: " + person.display.birthPlace + " D: " + person.display.deathPlace;
                     case 8:
-                        return "B: " + person.display.birthPlace + " " + person.display.birthDate;
+                        return "B: " + person.display.birthPlace + " D: " + person.display.deathPlace;
                 }
 
             }
@@ -204,9 +282,9 @@
                     case 6:
                         return "         " + person.display.birthDate;
                     case 7:
-                        return "D: " + person.display.deathPlace + " " + person.display.deathDate;
+                        return "";
                     case 8:
-                        return "D: " + person.display.deathPlace + " " + person.display.deathDate;
+                        return "";
                 }
 
             }
@@ -279,7 +357,7 @@
                     case 7:
                         return "12pt";;
                     case 8:
-                        return "8pt";;
+                        return "10pt";;
                 }
             }
 
@@ -302,7 +380,7 @@
                     case 7:
                         return "10pt";;
                     case 8:
-                        return "6pt";;
+                        return "8pt";;
                 }
             }
 
@@ -447,37 +525,50 @@
             function BoxSize(level){
 
                 box = {};
+                box.startPoint = 500;
                 switch(level){
                     case 0:
                         box.height = 400;
+                        box.width = 425;
                         break;
                     case 1:
                         box.height = 400;
+                        box.width = 425;
                         break;
                     case 2:
                         box.height = 400;
+                        box.width = 425;
                         break;
                     case 3:
                         box.height = 300;
+                        box.width = 425;
                         break;
                     case 4:
                         box.height = 300;
+                        box.width = 425;
                         break;
                     case 5:
                         box.height = 150;
+                        box.width = 425;
                         break;
                     case 6:
                         box.height = 150;
+                        box.width = 425;
                         break;
                     case 7:
-                        box.height = 75;
+                        box.height = 65;
+                        box.width = 600;
+                        box.startPoint += 150
                         break;
                     case 8:
-                        box.height = 55;
+                        box.height = 35;
+                        box.width = 600;
+                        box.startPoint += 195
                         break; 
                 }
 
-                return box.height;
+                console.log(box);
+                return box;
 
             }
 
@@ -572,7 +663,7 @@
                 }
                 top += 100;
 
-                top -= (BoxSize(GetLevel(num))/2);
+                top -= (BoxSize(GetLevel(num)).height/2);
                 
                 //console.log("num: " + num + " level: " + level + " spacing: " + spacing + " top: " + top);
 
