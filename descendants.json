@@ -1,0 +1,706 @@
+{
+  "links" : {
+    "collection" : {
+      "href" : "https://familysearch.org/collections/tree"
+    }
+  },
+  "persons" : [ {
+    "id" : "P1mal-1",
+    "living" : false,
+    "gender" : {
+      "type" : "http://gedcomx.org/Male"
+    },
+    "links" : {
+      "ancestry" : {
+        "href" : "https://familysearch.org/platform/tree/ancestry?person=P1mal-1&personDetails=&marriageDetails="
+      },
+      "child-relationships" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P1mal-1/child-relationships"
+      },
+      "descendancy" : {
+        "href" : "https://familysearch.org/platform/tree/descendancy?person=P1mal-1&personDetails=&marriageDetails="
+      },
+      "person" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P1mal-1"
+      },
+      "additional-parent-relationships" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P1mal-1/parent-relationships"
+      }
+    },
+    "notes" : [ {
+      "subject" : "note subject",
+      "text" : "note text"
+    } ],
+    "names" : [ {
+      "nameForms" : [ {
+        "fullText" : "Daniel Earl Bishop"
+      } ]
+    } ],
+    "facts" : [ {
+      "id" : "P1mal-1_fact1",
+      "attribution" : {
+        "contributor" : {
+          "resource" : "https://familysearch.org/platform/users/agents/007",
+          "resourceId" : "resourceId"
+        },
+        "modified" : 1492706809480
+      },
+      "type" : "http://gedcomx.org/Birth",
+      "date" : {
+        "original" : "06/27/1885",
+        "normalized" : [ {
+          "value" : "27 Jun 1885"
+        } ]
+      },
+      "place" : {
+        "original" : "De Witt, Clinton, Iowa, United States"
+      },
+      "value" : "factValue"
+    }, {
+      "id" : "P1mal-1_fact1",
+      "attribution" : {
+        "contributor" : {
+          "resource" : "https://familysearch.org/platform/users/agents/007",
+          "resourceId" : "resourceId"
+        },
+        "modified" : 1492706809480
+      },
+      "type" : "http://gedcomx.org/Death",
+      "date" : {
+        "original" : "12/05/1981",
+        "normalized" : [ {
+          "value" : "5 Dec 1981"
+        }, {
+          "value" : "12/05/1981"
+        } ]
+      },
+      "place" : {
+        "original" : "Fulton, Whiteside, Illinois, United States"
+      },
+      "value" : "factValue"
+    } ],
+    "display" : {
+      "name" : "Daniel Earl Bishop",
+      "gender" : "Male",
+      "lifespan" : "1885-1981",
+      "birthDate" : "06/27/1885",
+      "birthPlace" : "De Witt, Clinton, Iowa, United States",
+      "deathDate" : "12/05/1981",
+      "deathPlace" : "Fulton, Whiteside, Illinois, United States",
+      "marriageDate" : "08/13/1905",
+      "marriagePlace" : "Rethwisch, Schleswig-Holstein, Preussen, Germany",
+      "descendancyNumber" : "1"
+    }
+  }, {
+    "id" : "P2fem-1-S",
+    "living" : false,
+    "gender" : {
+      "type" : "http://gedcomx.org/Female"
+    },
+    "links" : {
+      "ancestry" : {
+        "href" : "https://familysearch.org/platform/tree/ancestry?person=P2fem-1-S&personDetails=&marriageDetails="
+      },
+      "child-relationships" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P2fem-1-S/child-relationships"
+      },
+      "descendancy" : {
+        "href" : "https://familysearch.org/platform/tree/descendancy?person=P2fem-1-S&personDetails=&marriageDetails="
+      },
+      "person" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P2fem-1-S"
+      },
+      "additional-parent-relationships" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P2fem-1-S/parent-relationships"
+      }
+    },
+    "notes" : [ {
+      "subject" : "note subject",
+      "text" : "note text"
+    } ],
+    "names" : [ {
+      "nameForms" : [ {
+        "fullText" : "Maude Langston"
+      } ]
+    } ],
+    "facts" : [ {
+      "id" : "P2fem-1-S_fact1",
+      "attribution" : {
+        "contributor" : {
+          "resource" : "https://familysearch.org/platform/users/agents/007",
+          "resourceId" : "resourceId"
+        },
+        "modified" : 1492706809480
+      },
+      "type" : "http://gedcomx.org/Birth",
+      "date" : {
+        "original" : "05/26/1885",
+        "normalized" : [ {
+          "value" : "26 May 1885"
+        } ]
+      },
+      "place" : {
+        "original" : "Idaho, United States"
+      },
+      "value" : "factValue"
+    }, {
+      "id" : "P2fem-1-S_fact1",
+      "attribution" : {
+        "contributor" : {
+          "resource" : "https://familysearch.org/platform/users/agents/007",
+          "resourceId" : "resourceId"
+        },
+        "modified" : 1492706809480
+      },
+      "type" : "http://gedcomx.org/Death",
+      "date" : {
+        "original" : "09/04/1949",
+        "normalized" : [ {
+          "value" : "4 Sep 1949"
+        }, {
+          "value" : "09/04/1949"
+        } ]
+      },
+      "place" : {
+        "original" : "Kaysville, Davis, Utah, United States"
+      },
+      "value" : "factValue"
+    } ],
+    "display" : {
+      "name" : "Maude Langston",
+      "gender" : "Female",
+      "lifespan" : "1885-1949",
+      "birthDate" : "05/26/1885",
+      "birthPlace" : "Idaho, United States",
+      "deathDate" : "09/04/1949",
+      "deathPlace" : "Kaysville, Davis, Utah, United States",
+      "marriageDate" : "08/13/1905",
+      "marriagePlace" : "Rethwisch, Schleswig-Holstein, Preussen, Germany",
+      "descendancyNumber" : "1-S"
+    }
+  }, {
+    "id" : "P3fem-1.1",
+    "living" : false,
+    "gender" : {
+      "type" : "http://gedcomx.org/Female"
+    },
+    "links" : {
+      "ancestry" : {
+        "href" : "https://familysearch.org/platform/tree/ancestry?person=P3fem-1.1&personDetails=&marriageDetails="
+      },
+      "child-relationships" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P3fem-1.1/child-relationships"
+      },
+      "additional-spouse-relationships" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P3fem-1.1/spouse-relationships"
+      },
+      "descendancy" : {
+        "href" : "https://familysearch.org/platform/tree/descendancy?person=P3fem-1.1&personDetails=&marriageDetails="
+      },
+      "person" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P3fem-1.1"
+      },
+      "additional-parent-relationships" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P3fem-1.1/parent-relationships"
+      }
+    },
+    "notes" : [ {
+      "subject" : "note subject",
+      "text" : "note text"
+    } ],
+    "names" : [ {
+      "nameForms" : [ {
+        "fullText" : "Elnor Bishop"
+      } ]
+    } ],
+    "facts" : [ {
+      "id" : "P3fem-1.1_fact1",
+      "attribution" : {
+        "contributor" : {
+          "resource" : "https://familysearch.org/platform/users/agents/007",
+          "resourceId" : "resourceId"
+        },
+        "modified" : 1492706809480
+      },
+      "type" : "http://gedcomx.org/Birth",
+      "date" : {
+        "original" : "03/24/1909",
+        "normalized" : [ {
+          "value" : "24 Mar 1909"
+        } ]
+      },
+      "place" : {
+        "original" : "Schleswig-Holstein, Germany"
+      },
+      "value" : "factValue"
+    }, {
+      "id" : "P3fem-1.1_fact1",
+      "attribution" : {
+        "contributor" : {
+          "resource" : "https://familysearch.org/platform/users/agents/007",
+          "resourceId" : "resourceId"
+        },
+        "modified" : 1492706809480
+      },
+      "type" : "http://gedcomx.org/Death",
+      "date" : {
+        "original" : "05/27/2000",
+        "normalized" : [ {
+          "value" : "27 May 2000"
+        }, {
+          "value" : "05/27/2000"
+        } ]
+      },
+      "place" : {
+        "original" : "Ottawa, La Salle, Illinois, United States"
+      },
+      "value" : "factValue"
+    } ],
+    "display" : {
+      "name" : "Elnor Bishop",
+      "gender" : "Female",
+      "lifespan" : "1909-2000",
+      "birthDate" : "03/24/1909",
+      "birthPlace" : "Schleswig-Holstein, Germany",
+      "deathDate" : "05/27/2000",
+      "deathPlace" : "Ottawa, La Salle, Illinois, United States",
+      "marriageDate" : "10/11/1933",
+      "marriagePlace" : "Hansuehn, Schleswig-Holstein, Preussen, Germany",
+      "descendancyNumber" : "1.1"
+    }
+  }, {
+    "id" : "P4mal-1.1-S",
+    "living" : false,
+    "gender" : {
+      "type" : "http://gedcomx.org/Male"
+    },
+    "links" : {
+      "ancestry" : {
+        "href" : "https://familysearch.org/platform/tree/ancestry?person=P4mal-1.1-S&personDetails=&marriageDetails="
+      },
+      "child-relationships" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P4mal-1.1-S/child-relationships"
+      },
+      "additional-spouse-relationships" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P4mal-1.1-S/spouse-relationships"
+      },
+      "descendancy" : {
+        "href" : "https://familysearch.org/platform/tree/descendancy?person=P4mal-1.1-S&personDetails=&marriageDetails="
+      },
+      "person" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P4mal-1.1-S"
+      },
+      "additional-parent-relationships" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P4mal-1.1-S/parent-relationships"
+      }
+    },
+    "notes" : [ {
+      "subject" : "note subject",
+      "text" : "note text"
+    } ],
+    "names" : [ {
+      "nameForms" : [ {
+        "fullText" : "Roscoe Phillips"
+      } ]
+    } ],
+    "facts" : [ {
+      "id" : "P4mal-1.1-S_fact1",
+      "attribution" : {
+        "contributor" : {
+          "resource" : "https://familysearch.org/platform/users/agents/007",
+          "resourceId" : "resourceId"
+        },
+        "modified" : 1492706809480
+      },
+      "type" : "http://gedcomx.org/Birth",
+      "date" : {
+        "original" : "04/25/1909",
+        "normalized" : [ {
+          "value" : "25 Apr 1909"
+        } ]
+      },
+      "place" : {
+        "original" : "Richmond, Cache, Utah, United States"
+      },
+      "value" : "factValue"
+    }, {
+      "id" : "P4mal-1.1-S_fact1",
+      "attribution" : {
+        "contributor" : {
+          "resource" : "https://familysearch.org/platform/users/agents/007",
+          "resourceId" : "resourceId"
+        },
+        "modified" : 1492706809480
+      },
+      "type" : "http://gedcomx.org/Death",
+      "date" : {
+        "original" : "10/03/2000",
+        "normalized" : [ {
+          "value" : "3 Oct 2000"
+        }, {
+          "value" : "10/03/2000"
+        } ]
+      },
+      "place" : {
+        "original" : "De Witt, Clinton, Iowa, United States"
+      },
+      "value" : "factValue"
+    } ],
+    "display" : {
+      "name" : "Roscoe Phillips",
+      "gender" : "Male",
+      "lifespan" : "1909-2000",
+      "birthDate" : "04/25/1909",
+      "birthPlace" : "Richmond, Cache, Utah, United States",
+      "deathDate" : "10/03/2000",
+      "deathPlace" : "De Witt, Clinton, Iowa, United States",
+      "marriageDate" : "10/11/1933",
+      "marriagePlace" : "Hansuehn, Schleswig-Holstein, Preussen, Germany",
+      "descendancyNumber" : "1.1-S"
+    }
+  }, {
+    "id" : "P5fem-1.2",
+    "living" : false,
+    "gender" : {
+      "type" : "http://gedcomx.org/Female"
+    },
+    "links" : {
+      "ancestry" : {
+        "href" : "https://familysearch.org/platform/tree/ancestry?person=P5fem-1.2&personDetails=&marriageDetails="
+      },
+      "additional-spouse-relationships" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P5fem-1.2/spouse-relationships"
+      },
+      "person" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P5fem-1.2"
+      },
+      "additional-parent-relationships" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P5fem-1.2/parent-relationships"
+      }
+    },
+    "notes" : [ {
+      "subject" : "note subject",
+      "text" : "note text"
+    } ],
+    "names" : [ {
+      "nameForms" : [ {
+        "fullText" : "Nelda Bishop"
+      } ]
+    } ],
+    "facts" : [ {
+      "id" : "P5fem-1.2_fact1",
+      "attribution" : {
+        "contributor" : {
+          "resource" : "https://familysearch.org/platform/users/agents/007",
+          "resourceId" : "resourceId"
+        },
+        "modified" : 1492706809480
+      },
+      "type" : "http://gedcomx.org/Birth",
+      "date" : {
+        "original" : "05/13/1907",
+        "normalized" : [ {
+          "value" : "13 May 1907"
+        } ]
+      },
+      "place" : {
+        "original" : "Parowan, Iron, Utah, United States"
+      },
+      "value" : "factValue"
+    }, {
+      "id" : "P5fem-1.2_fact1",
+      "attribution" : {
+        "contributor" : {
+          "resource" : "https://familysearch.org/platform/users/agents/007",
+          "resourceId" : "resourceId"
+        },
+        "modified" : 1492706809480
+      },
+      "type" : "http://gedcomx.org/Death",
+      "date" : {
+        "original" : "09/19/1908",
+        "normalized" : [ {
+          "value" : "19 Sep 1908"
+        }, {
+          "value" : "09/19/1908"
+        } ]
+      },
+      "place" : {
+        "original" : "Torrance, Los Angeles, California, United States"
+      },
+      "value" : "factValue"
+    } ],
+    "display" : {
+      "name" : "Nelda Bishop",
+      "gender" : "Female",
+      "lifespan" : "1907-1908",
+      "birthDate" : "05/13/1907",
+      "birthPlace" : "Parowan, Iron, Utah, United States",
+      "deathDate" : "09/19/1908",
+      "deathPlace" : "Torrance, Los Angeles, California, United States",
+      "descendancyNumber" : "1.2"
+    }
+  }, {
+    "id" : "P6mal-1.3",
+    "living" : false,
+    "gender" : {
+      "type" : "http://gedcomx.org/Male"
+    },
+    "links" : {
+      "ancestry" : {
+        "href" : "https://familysearch.org/platform/tree/ancestry?person=P6mal-1.3&personDetails=&marriageDetails="
+      },
+      "additional-spouse-relationships" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P6mal-1.3/spouse-relationships"
+      },
+      "person" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P6mal-1.3"
+      },
+      "additional-parent-relationships" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P6mal-1.3/parent-relationships"
+      }
+    },
+    "notes" : [ {
+      "subject" : "note subject",
+      "text" : "note text"
+    } ],
+    "names" : [ {
+      "nameForms" : [ {
+        "fullText" : "Fern Earl Bishop"
+      } ]
+    } ],
+    "facts" : [ {
+      "id" : "P6mal-1.3_fact1",
+      "attribution" : {
+        "contributor" : {
+          "resource" : "https://familysearch.org/platform/users/agents/007",
+          "resourceId" : "resourceId"
+        },
+        "modified" : 1492706809480
+      },
+      "type" : "http://gedcomx.org/Birth",
+      "date" : {
+        "original" : "12/21/1911",
+        "normalized" : [ {
+          "value" : "21 Dec 1911"
+        } ]
+      },
+      "place" : {
+        "original" : "Coal City, Grundy, Illinois, United States"
+      },
+      "value" : "factValue"
+    }, {
+      "id" : "P6mal-1.3_fact1",
+      "attribution" : {
+        "contributor" : {
+          "resource" : "https://familysearch.org/platform/users/agents/007",
+          "resourceId" : "resourceId"
+        },
+        "modified" : 1492706809480
+      },
+      "type" : "http://gedcomx.org/Death",
+      "date" : {
+        "original" : "06/16/1911",
+        "normalized" : [ {
+          "value" : "16 Jun 1911"
+        }, {
+          "value" : "06/16/1911"
+        } ]
+      },
+      "place" : {
+        "original" : "Rethwisch, Schleswig-Holstein, Preussen, Germany"
+      },
+      "value" : "factValue"
+    } ],
+    "display" : {
+      "name" : "Fern Earl Bishop",
+      "gender" : "Male",
+      "lifespan" : "1911-1911",
+      "birthDate" : "12/21/1911",
+      "birthPlace" : "Coal City, Grundy, Illinois, United States",
+      "deathDate" : "06/16/1911",
+      "deathPlace" : "Rethwisch, Schleswig-Holstein, Preussen, Germany",
+      "descendancyNumber" : "1.3"
+    }
+  }, {
+    "id" : "P7mal-1.4",
+    "living" : false,
+    "gender" : {
+      "type" : "http://gedcomx.org/Male"
+    },
+    "links" : {
+      "ancestry" : {
+        "href" : "https://familysearch.org/platform/tree/ancestry?person=P7mal-1.4&personDetails=&marriageDetails="
+      },
+      "child-relationships" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P7mal-1.4/child-relationships"
+      },
+      "additional-spouse-relationships" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P7mal-1.4/spouse-relationships"
+      },
+      "descendancy" : {
+        "href" : "https://familysearch.org/platform/tree/descendancy?person=P7mal-1.4&personDetails=&marriageDetails="
+      },
+      "person" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P7mal-1.4"
+      },
+      "additional-parent-relationships" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P7mal-1.4/parent-relationships"
+      }
+    },
+    "notes" : [ {
+      "subject" : "note subject",
+      "text" : "note text"
+    } ],
+    "names" : [ {
+      "nameForms" : [ {
+        "fullText" : "Lavon Bishop"
+      } ]
+    } ],
+    "facts" : [ {
+      "id" : "P7mal-1.4_fact1",
+      "attribution" : {
+        "contributor" : {
+          "resource" : "https://familysearch.org/platform/users/agents/007",
+          "resourceId" : "resourceId"
+        },
+        "modified" : 1492706809480
+      },
+      "type" : "http://gedcomx.org/Birth",
+      "date" : {
+        "original" : "02/23/1912",
+        "normalized" : [ {
+          "value" : "23 Feb 1912"
+        } ]
+      },
+      "place" : {
+        "original" : "Whitney, Franklin, Idaho, United States"
+      },
+      "value" : "factValue"
+    }, {
+      "id" : "P7mal-1.4_fact1",
+      "attribution" : {
+        "contributor" : {
+          "resource" : "https://familysearch.org/platform/users/agents/007",
+          "resourceId" : "resourceId"
+        },
+        "modified" : 1492706809480
+      },
+      "type" : "http://gedcomx.org/Death",
+      "date" : {
+        "original" : "08/17/1988",
+        "normalized" : [ {
+          "value" : "17 Aug 1988"
+        }, {
+          "value" : "08/17/1988"
+        } ]
+      },
+      "place" : {
+        "original" : "Idaho, United States"
+      },
+      "value" : "factValue"
+    } ],
+    "display" : {
+      "name" : "Lavon Bishop",
+      "gender" : "Male",
+      "lifespan" : "1912-1988",
+      "birthDate" : "02/23/1912",
+      "birthPlace" : "Whitney, Franklin, Idaho, United States",
+      "deathDate" : "08/17/1988",
+      "deathPlace" : "Idaho, United States",
+      "marriageDate" : "12/15/1937",
+      "marriagePlace" : "Preston, Oneida, Idaho, United States",
+      "descendancyNumber" : "1.4"
+    }
+  }, {
+    "id" : "P8fem-1.4-S",
+    "living" : false,
+    "gender" : {
+      "type" : "http://gedcomx.org/Female"
+    },
+    "links" : {
+      "ancestry" : {
+        "href" : "https://familysearch.org/platform/tree/ancestry?person=P8fem-1.4-S&personDetails=&marriageDetails="
+      },
+      "child-relationships" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P8fem-1.4-S/child-relationships"
+      },
+      "additional-spouse-relationships" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P8fem-1.4-S/spouse-relationships"
+      },
+      "descendancy" : {
+        "href" : "https://familysearch.org/platform/tree/descendancy?person=P8fem-1.4-S&personDetails=&marriageDetails="
+      },
+      "person" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P8fem-1.4-S"
+      },
+      "additional-parent-relationships" : {
+        "href" : "https://familysearch.org/platform/tree/persons/P8fem-1.4-S/parent-relationships"
+      }
+    },
+    "notes" : [ {
+      "subject" : "note subject",
+      "text" : "note text"
+    } ],
+    "names" : [ {
+      "nameForms" : [ {
+        "fullText" : "Martha Spencer"
+      } ]
+    } ],
+    "facts" : [ {
+      "id" : "P8fem-1.4-S_fact1",
+      "attribution" : {
+        "contributor" : {
+          "resource" : "https://familysearch.org/platform/users/agents/007",
+          "resourceId" : "resourceId"
+        },
+        "modified" : 1492706809480
+      },
+      "type" : "http://gedcomx.org/Birth",
+      "date" : {
+        "original" : "01/22/1912",
+        "normalized" : [ {
+          "value" : "22 Jan 1912"
+        } ]
+      },
+      "place" : {
+        "original" : "Bocholtz, Limburg, Netherlands"
+      },
+      "value" : "factValue"
+    }, {
+      "id" : "P8fem-1.4-S_fact1",
+      "attribution" : {
+        "contributor" : {
+          "resource" : "https://familysearch.org/platform/users/agents/007",
+          "resourceId" : "resourceId"
+        },
+        "modified" : 1492706809480
+      },
+      "type" : "http://gedcomx.org/Death",
+      "date" : {
+        "original" : "07/27/2003",
+        "normalized" : [ {
+          "value" : "27 Jul 2003"
+        }, {
+          "value" : "07/27/2003"
+        } ]
+      },
+      "place" : {
+        "original" : "Whitney, Franklin, Idaho, United States"
+      },
+      "value" : "factValue"
+    } ],
+    "display" : {
+      "name" : "Martha Spencer",
+      "gender" : "Female",
+      "lifespan" : "1912-2003",
+      "birthDate" : "01/22/1912",
+      "birthPlace" : "Bocholtz, Limburg, Netherlands",
+      "deathDate" : "07/27/2003",
+      "deathPlace" : "Whitney, Franklin, Idaho, United States",
+      "marriageDate" : "12/15/1937",
+      "marriagePlace" : "Preston, Oneida, Idaho, United States",
+      "descendancyNumber" : "1.4-S"
+    }
+  } ]
+}
